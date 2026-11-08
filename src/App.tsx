@@ -12,6 +12,7 @@ import { TouchControls } from './components/TouchControls';
 import { VictoryModal, DefeatModal, LevelSelectModal, LoreModal } from './components/ChamberModals';
 import { GuideModal } from './components/GuideModal';
 import { MusicStudioModal } from './components/MusicStudioModal';
+import { PostProcessingOverlay } from './components/PostProcessingOverlay';
 import { musicManager } from './audio/musicManager';
 import { HelpCircle, Keyboard, Music } from 'lucide-react';
 import { LEVELS } from './data/levels';
@@ -99,6 +100,9 @@ export default function App() {
           seamOffset={seamOffset}
           onSeamChange={setSeamOffset}
         />
+
+        {/* Global Post-Processing Layer (CRT scanlines, chromatic aberration, vignette) */}
+        <PostProcessingOverlay destabilization={destabilization} />
 
         {/* Floating Quick Controls Badge on Desktop */}
         <div className="hidden lg:flex items-center gap-3 absolute bottom-3 left-4 px-3 py-1.5 rounded-lg bg-slate-950/70 border border-slate-800/80 backdrop-blur-sm text-[11px] text-slate-400 font-mono pointer-events-none">
