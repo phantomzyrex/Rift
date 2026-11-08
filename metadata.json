@@ -1,0 +1,7 @@
+{
+  "name": "Rift - Dual-World Puzzle",
+  "description": "An atmospheric, psychological survival-puzzle game navigating two parallel dimensions simultaneously.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
